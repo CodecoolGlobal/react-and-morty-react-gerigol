@@ -12,17 +12,21 @@
   color: blueviolet;
 }
 
-
-
 @keyframes glow {
   from {
     color: rgb(23, 120, 139);
-    text-shadow: 0 0 10px rgb(99, 255, 32), 0 0 10px rgb(99, 255, 32), 0 0 15px rgb(122 243 69), 0 0 20px rgb(122 243 69), 0 0 25px rgb(122 243 69), 0 0 30px rgb(122 243 69), 0 0 35px rgb(122 243 69);
+    text-shadow: 0 0 10px rgb(99, 255, 32), 0 0 10px rgb(99, 255, 32),
+      0 0 15px rgb(122 243 69), 0 0 20px rgb(122 243 69),
+      0 0 25px rgb(122 243 69), 0 0 30px rgb(122 243 69),
+      0 0 35px rgb(122 243 69);
   }
 
   to {
     color: rgb(30, 218, 255);
-    text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(48, 134, 11), 0 0 20px rgb(48, 134, 11), 0 0 25px rgb(48, 134, 11), 0 0 30px rgb(48, 134, 11), 0 0 35px rgb(48, 134, 11), 0 0 40px rgb(48, 134, 11);
+    text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(48, 134, 11),
+      0 0 20px rgb(48, 134, 11), 0 0 25px rgb(48, 134, 11),
+      0 0 30px rgb(48, 134, 11), 0 0 35px rgb(48, 134, 11),
+      0 0 40px rgb(48, 134, 11);
   }
 }
 
@@ -59,7 +63,6 @@
   border-right-color: blueviolet;
   border-left-color: blueviolet;
   max-height: 20vh;
-
 }
 
 #list-back-button {
@@ -76,7 +79,6 @@
   background-color: rgb(101, 198, 218);
   color: blueviolet;
 }
-
 
 a {
   text-decoration: none;

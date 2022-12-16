@@ -1,13 +1,21 @@
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
+
   useEffect(() => {
-    fetch(url)
+    const controller = new AbortController();
+
+    fetch(url, { signal: controller.signal })
       .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((data) => setData(data))
+      .catch(() => {
+        // phantom catch for abort errors
+      });
+
+    return () => controller.abort();
   }, [url]);
+
   return { data };
 };
 

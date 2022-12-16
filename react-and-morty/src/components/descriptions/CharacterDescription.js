@@ -1,23 +1,23 @@
-import React from 'react'
-import useFetch from '../../api/useFetchSingle';
-import { mainUrls } from '../../api/dataRoutes';
-import { useParams, Link } from 'react-router-dom';
-import "../../style/description.css"
+import React from "react";
+import useFetch from "../../api/useFetchSingle";
+import { mainUrls } from "../../api/dataRoutes";
+import { useParams, Link } from "react-router-dom";
+import "../../style/description.css";
 
 const CharacterDescription = () => {
   const { id } = useParams();
   const { data: character } = useFetch(mainUrls.character + id);
   if (character) {
     return (
-      <div className='description'>
-        <Link to='../../characters/'>
+      <div className="description">
+        <Link to="/characters">
           <button>Back</button>
         </Link>
-        <div className='main'>
+        <div className="main">
           <h2>{character.name}</h2>
           <img src={character.image} alt={character.name} />
         </div>
-        <div className='info'>
+        <div className="info">
           <div>
             <p>Species: {character.species}</p>
             <p> Gender: {character.gender}</p>
@@ -29,9 +29,8 @@ const CharacterDescription = () => {
           </div>
         </div>
       </div>
-    )
+    );
   }
+};
 
-}
-
-export default CharacterDescription
+export default CharacterDescription;
